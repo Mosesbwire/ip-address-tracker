@@ -1,38 +1,170 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+  --dark-grey:hsl(0, 0%, 59%);
+  --very-dark-grey: hsl(0, 0%, 17%); 
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd{
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+html, body {
+    height: 100%;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.main {
+  position: relative;
+  font-family: 'Rubik', sans-serif;
+}
+
+.header {
+  background-image: url('./assets/pattern-bg.png');
+  display: grid;
+  justify-items: center;
+  padding-block: 1em;
+  height: 25vh;
+}
+.header-wrapper {
+  width: 90%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-container {
+  width: 100%;
+  margin-block: 1em;
   display: flex;
-  flex-direction: column;
+  
+}
+
+.input {
+  width: 90%;
+  padding-block: 1em;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: none;
+  cursor: pointer;
+  padding-inline-start: 1em;
+}
+
+.input:focus{
+  outline: none;
+}
+
+
+.search-btn {
+  background-color: black;
+  padding-inline: 1em;
+  display: grid;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.search-btn:hover {
+  background-color: var(--dark-grey);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heading{
+  color: #FFF;
+  font-size:  1.5em;
+  font-weight: 500;
 }
+
+.information-section {
+  display: grid;
+  justify-items: center;
+  position: absolute;
+  top: 60%;
+  width: 100%;
+}
+
+.information-wrapper {
+  background-color: #FFF;
+  width: 90%;
+  text-align: center;
+  padding-block: 1em;
+  border-radius: 15px;
+}
+
+.information-wrapper   * + * {
+  margin-bottom: 1em;
+}
+
+.subtitles {
+  font-size: .75em;
+  color: var(--dark-grey);
+}
+
+.info-text {
+  font-weight: 700;
+  color: var(--very-dark-grey);
+}
+
