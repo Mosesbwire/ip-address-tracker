@@ -168,3 +168,46 @@ a {
   color: var(--very-dark-grey);
 }
 
+
+@media (min-width: 900px){
+  .header {
+    height: 40vh;
+  }
+
+  .header-wrapper {
+    width: 50%;
+  }
+
+  .information-section {
+    top: 70%;
+    display: grid;
+    align-items: center;
+  }
+
+  .information-wrapper {
+    display: grid;
+    text-align: left;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    padding-inline: 2em;
+    padding-block: 2em;
+  }
+
+  .information-wrapper > * {
+    margin-bottom: 0;
+  }
+
+  .border-lg {
+    border-right: 1px solid lightgray;
+    margin-right: 1.5em;
+  }
+
+  .info-text {
+    font-size: 1.25em;
+    font-weight: 500;
+    padding-top: .5em;
+  }
+
+
+}
+
