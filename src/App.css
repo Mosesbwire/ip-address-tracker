@@ -154,7 +154,7 @@ a {
   border-radius: 15px;
 }
 
-.information-wrapper   * + * {
+.border-lg {
   margin-bottom: 1em;
 }
 
@@ -164,7 +164,7 @@ a {
 }
 
 .info-text {
-  font-weight: 700;
+  font-weight: 500;
   color: var(--very-dark-grey);
 }
 
@@ -193,13 +193,10 @@ a {
     padding-block: 2em;
   }
 
-  .information-wrapper > * {
-    margin-bottom: 0;
-  }
-
   .border-lg {
     border-right: 1px solid lightgray;
     margin-right: 1.5em;
+    margin-bottom: 0;
   }
 
   .info-text {
