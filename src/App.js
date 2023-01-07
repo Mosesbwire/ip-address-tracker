@@ -7,7 +7,6 @@ import IPInformation from './components/IPInformation';
 function App() {
   return (
     <div className='main'>
-      
       <Header/>
       <IPInformation/>
       <Map/>
