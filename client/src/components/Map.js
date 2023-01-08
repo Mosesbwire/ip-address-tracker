@@ -8,7 +8,7 @@ import locationPin from '../assets/icon-location.svg'
 const Map = props => {
   const pin = new Icon({
     iconUrl: locationPin,
-    iconSize: [25,25]
+    iconSize: [20,20]
   })
   return (
     <div>
