@@ -2,15 +2,27 @@
 const express = require('express')
 const config = require('config')
 const superagent = require('superagent')
+const cors = require('cors')
 const {check, validationResult} = require('express-validator')
 const app = express()
 
 const apiKey = config.get('apikey')
 
-
+app.use(cors())
 app.use(express.json({extended: false}))
 
-app.get('/', (req,res)=> res.send('API RUNNING'))
+app.get('/', async (req,res)=> {
+
+	try {
+		const resp = await superagent.get(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}`)
+		res.json(JSON.parse(resp.text))
+
+	} catch (err) {
+		console.error(err.message)
+		res.status(500).send('Server Error')
+	}
+	
+})
 
 
 
