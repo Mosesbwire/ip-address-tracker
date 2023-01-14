@@ -29,7 +29,6 @@ const Location = ({lat, lng}) =>{
   ) : null
 }
 
-
   return loading ? null : <Fragment>
         <div className='map'>
         
